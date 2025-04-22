@@ -38,19 +38,19 @@ export function Card({ id, name, userSocial, dateExecute }: CardProps) {
   };
 
   return (
-    <div className="bg-[#191718]  p-4 w-[300px] justify-center">
-      <h2 className="text-xl font-semibold text-[#A7A5A6] mb-2">{name}</h2>
+    <div className="bg-[#f4f4f5] rounded-xl shadow-lg p-4 w-[350px] justify-center">
+      <h2 className="text-xl font-semibold text-[22px] text-[#070707] mb-2">{name}</h2>
       <a
         href={`https://www.instagram.com/${socialWithoutAt}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-blue-600 hover:underline text-[15px] mb-2 block font-light"
+        className="text-blue-600 hover:underline text-[17px] mb-2 block "
       >
         @{userSocial}
       </a>
 
       <div className="flex items-center space-x-2 mb-2 w-full justify-between">
-        <p className="text-[#7B797A] text-[15px]">
+        <p className="text-gray-700 text-[17px]">
           Inicia em: {date.toLocaleDateString("pt-BR")}
         </p>
 
@@ -59,13 +59,13 @@ export function Card({ id, name, userSocial, dateExecute }: CardProps) {
             onClick={() => setIsEditing(true)}
             className=" text-white mx-2 py-0 cursor-pointer"
           >
-            <FaUserEdit className="text-[#A7A5A6]" />
+            <FaUserEdit className="text-gray-700 text-[20px]" />
           </button>
           <button
             onClick={handleDelete}
             className=" text-white mx-2 py-0 cursor-pointer rounded transition-colors"
           >
-            <MdDelete className="text-[#A7A5A6]" />
+            <MdDelete className="text-gray-700 text-[20px]" />
           </button>
         </div>
       </div>

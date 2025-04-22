@@ -15,26 +15,29 @@ function App() {
   };
 
   return (
-    <div className="justify-center items-center h-screen bg-black p-10">
-      <nav className="mt-5 flex">
-        <div className="py-5 px-20 mx-18 flex w-full justify-between items-center  bg-[#292728] ">
+    <div className="justify-center items-center h-screen bg-[#070707] ">
+      <nav className="flex">
+        <div className="px-40 py-8 flex w-full justify-between items-center shadow-lg bg-[#0e0e0e] ">
           <div className="flex items-center justify-center">
-            <GiTargetShot className="text-[40px] mr-2" />
-            <h1 className="font-bold text-[30px] text-black"> Alvo </h1>
+            
+            <a href="/" className="flex items-center">
+            <GiTargetShot className="text-[32px] text-white mr-2" />
+            <h1 className="font-bold text-[28px] text-white"> Alvo </h1>
+            </a>
           </div>
 
           {isModalOpen && <CreateModal closeModal={handleOpenModal} />}
           <button
-            className="cursor-pointer font-semibold  text-black  ml-4"
+            className="cursor-pointer font-semibold  text-white  ml-4"
             onClick={handleOpenModal}
           >
          
-            <BsPersonFillAdd className="text-[33px]" />
+            <BsPersonFillAdd className="text-[30px]" />
           </button>
         </div>
       </nav>
 
-      <div className="flex flex-wrap gap-12 mt-15 justify-center items-center">
+      <div className="flex flex-wrap px-40 mt-15 justify-between gap-y-13 items-center">
         {data?.map((alvoData: AlvoData) => (
           <Card
             key={alvoData.id}
